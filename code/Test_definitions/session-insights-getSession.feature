@@ -6,7 +6,7 @@ Feature: CAMARA Session Insights API, v0.1.0-rc.1 - Operation getSession
     #
     # Testing assets:
     # * The sessionId of an existing HTTP session
-    # * The sessionId of an existing MQTT3 session  
+    # * The sessionId of an existing MQTT3 session
     # * The sessionId of an existing MQTT5 session
     # * The sessionId of an existing session with applicationSessionId
     # * The sessionId of sessions created with different device identifier types
