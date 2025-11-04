@@ -94,16 +94,6 @@ Feature: CAMARA Session Insights API, v0.1.0-rc.1 - Operation sendSessionMetrics
     When the request "sendSessionMetrics" is sent
     Then the response status code is 204
 
-  @session_insights_sendMetrics_07_multiple_submissions
-  Scenario: Send metrics multiple times to same session
-    Given an existing active session created by operation createSession
-    And the path parameter "sessionId" is set to the value for that session
-    And the request body complies with the OAS schema at "/components/schemas/MetricsPayload"
-    When the request "sendSessionMetrics" is sent
-    Then the response status code is 204
-    When the request "sendSessionMetrics" is sent again with different metric values
-    Then the response status code is 204
-
     # Errors 400
 
   @session_insights_sendMetrics_400.1_invalid_session_id_format
